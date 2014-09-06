@@ -1,0 +1,86 @@
+body {
+  margin: 15px 25px 0 25px;
+}
+.head {
+  font-size: 2em;
+  width: 1180px;
+}
+.search {
+  font-size: 100% !important;
+  vertical-align: middle;
+  height: 35px !important;
+  width: 955px;
+  outline:none;
+  border-color:#D40000 !important;
+  box-shadow:0 0 10px white !important;
+  margin-left: 17px;
+  color: black;
+  margin-top: 10px;
+}
+.overview {
+  font-family: Ubuntu;
+  font-size: 14pt;
+  line-height: 1.5em;
+  text-align: justify;
+  margin-left: 125px;
+  width: 750px;
+}
+.overview h1 {
+  color: #D40000;
+}
+.overview h2 {
+  font-size: 1em;
+  line-height: normal;
+}
+.overview strong {
+  color: #D40000;
+  font-weight: normal;
+}
+.overview a {
+  color: #D40000;
+}
+#sidebar {
+  position: absolute;
+  width: 185px;
+}
+#results {
+  width: 1000px;
+  margin-left: 210px;
+  min-height: 500px;
+}
+pre {
+  background-color: #FFFABE;
+  font-size: 8pt;
+}
+.btn {
+  width: 100%;
+}
+.indicator {
+  float: right;
+}
+#results .well {
+  text-align: justify;
+  width: 429px;
+}
+#left {
+  width: 500px;
+  float: left;
+}
+#right {
+  width: 500px;
+  float: left;
+  margin-left: 0px;
+}
+.footer {
+  margin: 0 100px 20px 205px;
+  color: #C3C3C3;
+  font-family: Ubuntu;
+  font-size: 10pt;
+  width: 980px;
+}
+.footer a {
+  color: #C3C3C3;
+}
+.note {
+  float: right;
+}

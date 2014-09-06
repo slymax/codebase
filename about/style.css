@@ -1,0 +1,46 @@
+body {
+  font-family: Ubuntu;
+  margin: 25px 25% 0 25%;
+  text-align: justify;
+  font-size: 14pt;
+}
+p {
+  line-height: 1.5em;
+}
+h1 {
+  font-size: 1.5em;
+}
+a, h1, h2 {
+  color: #D40000;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+span {
+  font-size: 3em;
+  text-align: right;
+}
+img {
+  margin-top: 15px;
+  float: right;
+}
+hr {
+  border: 0;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #ffffff;
+}
+.footer {
+  margin-bottom: 20px;
+  color: #C3C3C3;
+  font-family: Ubuntu;
+  font-size: 10pt;
+  width: 100%;
+}
+.footer a {
+  color: #C3C3C3;
+}
+.note {
+  float: right;
+  font-size: 10pt;
+}
