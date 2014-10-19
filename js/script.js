@@ -1,7 +1,7 @@
 $(document).ready(function(){
-	
+
+	$('.search').width($(window).width() - 350);
 	var checked = ['HTML','CSS','JavaScript','jQuery'];
-	var counter = 2;
 	var label, base;
 
 	function search(term,result,element){
@@ -16,13 +16,12 @@ $(document).ready(function(){
 		}
 		if (found === term.length) {
 			return true;
-		}		
+		}
 	}
-	
+
 	function display(term) {
 		$('.overview').hide();
-		$('#left').empty();
-		$('#right').empty();
+		$('.results').empty();
 		length = term.length
 		if (length < 3) {
 			$('.overview').show();
@@ -35,45 +34,45 @@ $(document).ready(function(){
 					if (length > 2 && checked.indexOf(lang) > -1 && search(term,result,element)) {
 						switch (lang) {
 							case 'HTML':
-							label = 'label label-info';
-							var scheme = '<div class="span5"><div class="well"><span class="'+label+'">'+lang+'</span><strong>&nbsp;&nbsp;'+result.title+'</strong><span class="indicator"><code>&lt;'+element+'&gt;</code></span><br><br>'+result.description
+							label = 'ui ribbon blue label';
+							var scheme = '<div class="card"><div class="ui piled segment"><div class="'+label+'">'+lang+'</div><strong>'+result.title+'</strong><div class="indicator ui small label"><code>&lt;'+element+'&gt;</code></div><br><br>'+result.description
 							break;
 							case 'CSS':
-							label = 'label label-success';
-							var scheme = '<div class="span5"><div class="well"><span class="'+label+'">'+lang+'</span><strong>&nbsp;&nbsp;'+result.title+'</strong><span class="indicator"><code>'+element+'</code></span><br><br>'+result.description
+							label = 'ui ribbon green label';
+							var scheme = '<div class="card"><div class="ui piled segment"><div class="'+label+'">'+lang+'</div><strong>'+result.title+'</strong><div class=" indicator ui small label"><code>'+element+'</code></div><br><br>'+result.description
 							break;
 							case 'JavaScript':
-							label = 'label label-important';
-							var scheme = '<div class="span5"><div class="well"><span class="'+label+'">'+lang+'</span><strong>&nbsp;&nbsp;'+result.title+'</strong><br><br>'+result.description
+							label = 'ui ribbon red label';
+							var scheme = '<div class="card"><div class="ui piled segment"><div class="'+label+'">'+lang+'</div><strong>'+result.title+'</strong><br><br>'+result.description
 							break;
 							case 'jQuery':
-							label = 'label label-warning';
-							var scheme = '<div class="span5"><div class="well"><span class="'+label+'">'+lang+'</span><strong>&nbsp;&nbsp;'+result.title+'</strong><br><br>'+result.description
+							label = 'ui ribbon black label';
+							var scheme = '<div class="card"><div class="ui piled segment"><div class="'+label+'">'+lang+'</div><strong>'+result.title+'</strong><br><br>'+result.description
 							break;
 							default:
-							label = 'label label-info';
+							label = 'ui ribbon blue label';
 							break;
 						}
 						if (result.code != 'NO_CODE') {
-							scheme += '<br><br><pre>'+result.code+'</pre>'
+							scheme += '<br><div class="code ui secondary segment"><code>'+result.code+'</code></div>'
 						} else {
-							scheme += '<br><br>'
+							scheme += '<br>'
 						}
-						scheme += '<a href="'+result.url+'" target="_blank"><button class="btn btn-small" type="button">READ MORE</button></a></div></div>';
-						if (counter % 2 === 0) {
-							$('#left').append(scheme);
-							counter++;
-						} else {
-							$('#right').append(scheme);
-							counter++;
-						}
+						scheme += '<a href="'+result.url+'" target="_blank" class="more"><div class="tiny fluid ui button">READ MORE</div></a></div></div>';
+
+						$('.results').append(scheme);
 					}
 				}
 			}
+			$('.results').gridalicious({
+			    width: 325,
+			    gutter: 25,
+			    selector: '.card',
+			    animate: false
+			});
 		}
-		counter = 2;
 	}
-	
+
 	$('#HTML').change(function() {
 		if (checked.indexOf('HTML') >= 0) {
 			checked.splice(checked.indexOf('HTML'), 1);
@@ -104,8 +103,12 @@ $(document).ready(function(){
 			display($(".search").val());
 		}
 	});
-	
-	$.getJSON('data.js', function(data) {
+
+	$.getJSON('../data/data.min.js', function(data) {
 		base = data;
+	});
+
+	$(window).on('resize', function(){
+		$('.search').width($(window).width() - 350);
 	});
 });

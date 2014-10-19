@@ -1,0 +1,60 @@
+body {
+  margin: 15px 25px 0 25px;
+  background-color: #f3f3f3;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.head {
+  font-size: 1.1em;
+}
+img {
+  padding: 5px 35px 0px 5px;
+  float: left;
+}
+.search {
+  border-color:#D40000;
+}
+.overview {
+  font-size: 14pt;
+  line-height: 1.5em;
+  text-align: justify;
+  margin: 0 35px 0 228px;
+  min-width: 65%;
+}
+.more {
+  text-decoration: none !important;
+}
+.overview h1 {
+  color: #D40000;
+}
+.overview h2 {
+  font-size: 1em;
+  line-height: normal;
+}
+.overview strong {
+  color: #D40000;
+  font-weight: normal;
+}
+.overview a {
+  color: #D40000;
+}
+.sidebar {
+  position: absolute;
+  margin-top: 25px;
+  width: 190px;
+}
+.results {
+  margin-left: 200px;
+  margin-top: 25px;
+}
+.card {
+  font-size: 0.8em;
+  text-align: justify;
+}
+.code {
+  text-align: left;
+}
+.indicator {
+  float: right;
+  text-transform: lowercase !important;
+  margin-top: 0 !important;
+}

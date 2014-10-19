@@ -3,39 +3,55 @@
   <head>
     <meta charset="UTF-8">
     <title>Code Base - Your Instant Code Reference</title>
-    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/semantic/segment.min.css">
+    <link rel="stylesheet" type="text/css" href="css/semantic/input.min.css">
+    <link rel="stylesheet" type="text/css" href="css/semantic/label.min.css">
+    <link rel="stylesheet" type="text/css" href="css/semantic/checkbox.min.css">
+    <link rel="stylesheet" type="text/css" href="css/semantic/button.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $('.search').width($(window).width() - 350);
+    </script>
   </head>
   <body>
     <div class="head">
       <a href="http://www.bitpanda.org/codebase/"><img src="logo.png" alt="logo"></a>
-      <input type="text" class="search" autofocus="autofocus"><hr>
-    </div>
-    <div class="container" id="sidebar">
-      <div class="well">
-        <strong>Languages:</strong><br><br>
-        <form>
-          <label class="checkbox" id="HTML"><input type="checkbox" checked>HTML</label>
-          <label class="checkbox" id="CSS"><input type="checkbox" checked>CSS</label>
-          <label class="checkbox" id="JavaScript"><input type="checkbox" checked>JavaScript</label>
-          <label class="checkbox" id="jQuery"><input type="checkbox" checked>jQuery</label>
-        </form>
+      <div class="ui big input">
+        <input type="text" class="search" autofocus="autofocus">
       </div>
     </div>
-    <div class="container" id="results">
+    <div class="sidebar">
+      <div class="ui piled segment">
+        <strong>Languages:</strong><br><br>
+        <div class="ui checkbox">
+          <input type="checkbox" id="HTML" checked>
+          <label for="HTML">HTML</label>
+        </div><br>
+        <div class="ui checkbox">
+          <input type="checkbox" id="CSS" checked>
+          <label for="CSS">CSS</label>
+        </div><br>
+        <div class="ui checkbox">
+          <input type="checkbox" id="JavaScript" checked>
+          <label for="JavaScript">JavaScript</label>
+        </div><br>
+        <div class="ui checkbox">
+          <input type="checkbox" id="jQuery" checked>
+          <label for="jQuery">jQuery</label>
+        </div>
+      </div>
+    </div>
+    <div class="container">
       <div class="overview">
         <h1>Welcome to Code Base</h1>
         <h2>Code Base is an insanely fast code reference for web developers that allows you to search within multiple documentations at once. To get started, put your fingers on the keyboard and start typing.</h2>
         <p>Currently, you can search <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong> and <strong>jQuery</strong> but more languages will be added in the future. If you run into any problems or if you would like to send me general feedback, please contact me at <a href="mailto:contact@bitpanda.org">contact@bitpanda.org</a>.</p>
       </div>
-      <div class="row" id="left">
-      </div>
-      <div class="row" id="right">
-      </div>
+      <div class="results"></div>
     </div>
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-    <script type="text/javascript" src="jquery-typing.min.js"></script>
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="js/jquery-typing.min.js"></script>
+    <script type="text/javascript" src="js/grid.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>
