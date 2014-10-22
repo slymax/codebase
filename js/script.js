@@ -59,7 +59,6 @@ $(document).ready(function(){
 							scheme += '<br>'
 						}
 						scheme += '<a href="'+result.url+'" target="_blank" class="more"><div class="tiny fluid ui button">READ MORE</div></a></div></div>';
-
 						$('.results').append(scheme);
 					}
 				}
@@ -81,6 +80,7 @@ $(document).ready(function(){
 		}
 		display($(".search").val());
 	});
+
 	$('#CSS').change(function() {
 		if (checked.indexOf('CSS') >= 0) {
 			checked.splice(checked.indexOf('CSS'), 1);
@@ -89,11 +89,21 @@ $(document).ready(function(){
 		}
 		display($(".search").val());
 	});
+
 	$('#JavaScript').change(function() {
 		if (checked.indexOf('JavaScript') >= 0) {
 			checked.splice(checked.indexOf('JavaScript'), 1);
 		} else {
 			checked.push('JavaScript');
+		}
+		display($(".search").val());
+	});
+
+	$('#jQuery').change(function() {
+		if (checked.indexOf('jQuery') >= 0) {
+			checked.splice(checked.indexOf('jQuery'), 1);
+		} else {
+			checked.push('jQuery');
 		}
 		display($(".search").val());
 	});
