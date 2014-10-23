@@ -1,6 +1,6 @@
 # Code Base
 
-[Codebase](http://www.bitpanda.org/codebase/) is a quick code reference for web developers. It allows users to search within multiple documentations at once and displays results immediately. Currently, the following languages and libraries are supported:
+[Codebase](http://codebase.bitpanda.org/) is a quick code reference for web developers. It allows users to search within multiple documentations at once and displays results immediately. Currently, the following languages and libraries are supported:
 
 * HTML
 * CSS
@@ -9,7 +9,7 @@
 
 # Screenshot
 
-![Screenshot](http://www.bitpanda.org/codebase/screenshot.png)
+![Screenshot](http://codebase.bitpanda.org/screenshot.png)
 
 # Sources
 
