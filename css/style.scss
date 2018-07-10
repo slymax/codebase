@@ -1,0 +1,76 @@
+$background: #f3f3f3;
+$highlight: #D40000;
+
+body {
+  margin: 0 25px 0 25px;
+  background-color: $background;
+  font-family: 'Oxygen', sans-serif;
+}
+.head {
+  font-size: 1.1em;
+  padding-top: 20px;
+  img {
+    width: 230px;
+    padding: 1px 35px 0 5px;
+    float: left;
+  }
+}
+.overview {
+  font-size: 1.1em;
+  text-align: justify;
+  max-height: 1000000px;
+  margin: 25px 35px 0 230px !important;
+  min-width: 65%;
+  h1 {
+    color: $highlight;
+  }
+  h2 {
+    font-size: 1.05em;
+    margin: 0 !important;
+  }
+  strong {
+    color: $highlight;
+    font-weight: normal;
+  }
+  a {
+    color: $highlight;
+  }
+  code {
+    font-weight: bold;
+  }
+  li {
+    list-style-position: inside;
+  }
+}
+.more {
+  text-decoration: none !important;
+}
+.sidebar {
+  position: absolute;
+  margin-top: 25px;
+  width: 195px;
+}
+.results {
+  margin: 25px 0 0 205px;
+}
+.card {
+  font-size: 0.85em;
+  line-height: 1.35em;
+  text-align: justify;
+}
+.code {
+  text-align: left;
+}
+.indicator {
+  float: right;
+  text-transform: lowercase !important;
+  margin-top: 0 !important;
+}
+.footer {
+  position: fixed;
+  bottom: 0px;
+  margin: 0 0 5px -15px;
+  img {
+    height: 35px;
+  }
+}

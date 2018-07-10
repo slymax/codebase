@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Code Base - Your Instant Code Reference</title>
+    <meta name="description" content="Code Base is an insanely fast code reference for web developers that allows users to search within multiple documentations at once. Currently, you can search within the HTML, CSS, JavaScript and jQuery documentations but more languages will be added in the future.">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/semantic-ui/2.0.8/semantic.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen:400,700,300">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="head">
+      <a href="https://slymax.com/codebase/"><img src="img/logo.png" alt="logo"></a>
+      <div class="ui big input">
+        <input type="text" class="search" autofocus="autofocus">
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="ui segment">
+        <strong>Languages:</strong><p>
+        <div class="ui checkbox">
+          <input type="checkbox" id="HTML" checked>
+          <label for="HTML">HTML</label>
+        </div><br>
+        <div class="ui checkbox">
+          <input type="checkbox" id="CSS" checked>
+          <label for="CSS">CSS</label>
+        </div><br>
+        <div class="ui checkbox">
+          <input type="checkbox" id="JavaScript" checked>
+          <label for="JavaScript">JavaScript</label>
+        </div><br>
+        <div class="ui checkbox">
+          <input type="checkbox" id="jQuery" checked>
+          <label for="jQuery">jQuery</label>
+        </div></p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="overview ui piled segments">
+        <div class="ui segment">
+          <h1>Welcome to Code Base</h1>
+          <h2>Code Base is an insanely fast code reference for web developers that allows you to search within multiple documentations at once. Here are some examples to get you started:</h2>
+        </div>
+        <div class="ui secondary segment">
+          <li>If you want to know how to make a piece of text bold, simply search for <code>bold</code>.</li>
+          <li>Searching for <code>lowercase</code> will show you how to convert a string to lowercase characters.</li>
+          <li>If you want to create a sliding animation using jQuery, try searching for <code>slide</code>.</li>
+        </div>
+        <div class="ui segment">
+          Currently, you can search within the <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong> and <strong>jQuery</strong> documentations but more languages will be added in the future. If you run into any problems or if you would like to send me general feedback, please contact me at <a href="mailto:contact@slymax.com">contact@slymax.com</a>.
+        </div>
+      </div>
+      <div class="results"></div>
+    </div>
+    <div class="footer">
+      <a href="https://slymax.com/">
+        <img src="img/footer.png" alt="slymax">
+      </a>
+    </div>
+    <script src="//cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/script.min.js"></script>
+  </body>
+</html>
